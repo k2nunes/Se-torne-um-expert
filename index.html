@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Se Torne um Expert</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f3f3f3; color: #333; }
+    .hero { background: url('https://images.unsplash.com/photo-1573495628365-650c184e0bb3?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; color: #fff; padding: 60px 20px; text-align: center; }
+    .hero h1 { font-size: 2.8em; margin-bottom: 20px; }
+    .hero p { font-size: 1.4em; margin-bottom: 30px; }
+    .cta-button { background: #f90; color: #111; padding: 15px 30px; font-size: 1.2em; border: none; border-radius: 5px; text-decoration: none; }
+    .section { padding: 40px 20px; max-width: 800px; margin: 20px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .section h2 { color: #111; margin-bottom: 20px; }
+    .section ul { padding-left: 20px; }
+    .section ul li { margin-bottom: 10px; }
+    .testemunho { display: flex; align-items: center; gap: 20px; margin-top: 30px; }
+    .testemunho img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+    .footer { text-align: center; padding: 20px; font-size: 0.9em; color: #888; }
+    .countdown { font-size: 1.2em; color: #d00; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Transforme o que você faz em visibilidade e autoridade</h1>
+    <p>Aprenda como mostrar seu trabalho na internet, atrair clientes e se tornar um verdadeiro expert.</p>
+    <a class="cta-button" href="#comprar">Quero me tornar um expert!</a>
+  </div>
+
+  <div class="section">
+    <h2>O que você vai aprender:</h2>
+    <ul>
+      <li>Como transformar seu talento em conteúdo relevante</li>
+      <li>Como atrair seguidores e possíveis clientes</li>
+      <li>Como usar Instagram, TikTok e YouTube para crescer</li>
+      <li>Como se tornar referência no que você faz</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Esse método serve pra você?</h2>
+    <p>Sim! Se você trabalha duro, mas sente que ninguém vê seu esforço, esse e-book é pra você.</p>
+    <p>Seja pedreiro, barbeiro, cabeleireira, costureira, manicure, marceneiro, mecânico, ou qualquer outro profissional que quer ganhar visibilidade e respeito: esse conteúdo vai abrir sua mente.</p>
+  </div>
+
+  <div class="section">
+    <h2>Quem já venceu com autenticidade</h2>
+    <div class="testemunho">
+      <img src="https://pbs.twimg.com/profile_images/1670920570360227841/otRVD6Pt_400x400.jpg" alt="Fome de Pedreiro">
+      <div>
+        <strong>Fome de Pedreiro</strong><br>
+        “Eu comecei mostrando meu corre. Hoje eu ganho dinheiro com meu nome. Se você também quer crescer mostrando o que faz, esse e-book é o caminho.”
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="comprar">
+    <h2>Garanta já o seu por apenas R$19,90</h2>
+    <p>O valor está promocional por tempo limitado.</p>
+    <div class="countdown">Oferta expira em: <span id="timer">00:10:00</span></div>
+    <a class="cta-button" href="https://seulink.com/comprar-ebook">Comprar agora</a>
+    <p><small>Pagamento 100% seguro | Acesso imediato após a compra</small></p>
+  </div>
+
+  <div class="footer">
+    © 2025 Se Torne um Expert. Todos os direitos reservados.
+  </div>
+
+  <script>
+    let time = 600;
+    const timer = document.getElementById("timer");
+    const countdown = setInterval(() => {
+      const min = String(Math.floor(time / 60)).padStart(2, '0');
+      const sec = String(time % 60).padStart(2, '0');
+      timer.textContent = `${min}:${sec}`;
+      if (time <= 0) clearInterval(countdown);
+      time--;
+    }, 1000);
+  </script>
+</body>
+</html>
